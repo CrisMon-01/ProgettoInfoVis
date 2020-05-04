@@ -1,0 +1,64 @@
+{
+    "datapoint": {
+        "uno" : {
+            "lunghezza" : "3595",
+            "dimensione ruote": "13",
+            "distanza delle ruote" : "700",
+            "numero" : "1"
+        },
+        "due" : {
+            "lunghezza" : "4000",
+            "dimensione ruote": "13,2",
+            "distanza delle ruote" : "710",
+            "numero" : "44"
+        },
+        "tre" : {
+            "lunghezza" : "4100",
+            "dimensione ruote": "13,45",
+            "distanza delle ruote" : "725",
+            "numero" : "77"
+        },
+        "quattro" : {
+            "lunghezza" : "4125",
+            "dimensione ruote": "13,5",
+            "distanza delle ruote" : "725",
+            "numero" : "5"
+        },
+        "cinque" : {
+            "lunghezza" : "4130",
+            "dimensione ruote": "14",
+            "distanza delle ruote" : "730",
+            "numero" : "16"
+        },
+        "sei" : {
+            "lunghezza" : "4200",
+            "dimensione ruote": "16",
+            "distanza delle ruote" : "735",
+            "numero" : "7"
+        },
+        "sette" : {
+            "lunghezza" : "4400",
+            "dimensione ruote": "16,5",
+            "distanza delle ruote" : "740",
+            "numero" : "99"
+        },
+        "otto" : {
+            "lunghezza" : "4405",
+            "dimensione ruote": "17",
+            "distanza delle ruote" : "750",
+            "numero" : "33"
+        },
+        "nove" : {
+            "lunghezza" : "4500",
+            "dimensione ruote": "18",
+            "distanza delle ruote" : "760",
+            "numero" : "3"
+        },
+        "dieci" : {
+            "lunghezza" : "4550",
+            "dimensione ruote": "18",
+            "distanza delle ruote" : "770",
+            "numero" : "10"
+        }
+    }
+}
