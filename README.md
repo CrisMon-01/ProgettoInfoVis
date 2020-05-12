@@ -10,6 +10,7 @@ In base a questi dati disegna 10 automobili da formula uno viste dall'alto (è s
 Facendo click con il pulsante sinistro su una caratteristica di una automobile, tutte le automobili si muovono verso destra di una distanza proporzionale alla loro posizione nell'ordinamento dei data-point in base alla variabile associata a quella caratteristica. Fai in modo che le transizioni siano fluide e continue (non a salti). <br/>
 
 DATI : <br/>
+numero<br/>
 lunghezza<br/>
 dimensione ruote<br/>
 distanza delle ruote<br/>
