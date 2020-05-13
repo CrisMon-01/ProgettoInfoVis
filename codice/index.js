@@ -42,7 +42,7 @@ d3.json('../dati/datimultivar.json').then( data => {
         .attr('stroke','black')
         .attr('stroke-width', '1')
         .attr('id','frontwing')
-            .on('click', transitionByLength.bind(this));
+            .on('click', transitionByLength);
 
     // muzzle
     groups.append('rect')
@@ -181,9 +181,11 @@ d3.json('../dati/datimultivar.json').then( data => {
         .attr('stroke-width',5)
         .attr('id','braccioupdx');
 
-    function transitionByLength () {
-        d3.selectAll('g')
-            .attr('transform', 'translate(100,0)')
-    }
-
 });
+
+const transitionByLength = (d,i,n) => {
+    console.log(d.distanza_delle_ruote);
+    d3.selectAll('g')
+        .transition().duration(500)        
+            .attr('transform', 'translate('+d.distanza_delle_ruote+',0)');
+}
