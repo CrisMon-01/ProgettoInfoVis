@@ -41,7 +41,8 @@ d3.json('../dati/datimultivar.json').then( data => {
         .attr('fill', d => ( colour(d.numero) ))
         .attr('stroke','black')
         .attr('stroke-width', '1')
-        .attr('id','frontwing');
+        .attr('id','frontwing')
+            .on('click', transitionByLength.bind(this));
 
     // muzzle
     groups.append('rect')
@@ -179,5 +180,10 @@ d3.json('../dati/datimultivar.json').then( data => {
         .attr('stroke','black')
         .attr('stroke-width',5)
         .attr('id','braccioupdx');
+
+    function transitionByLength () {
+        d3.selectAll('g')
+            .attr('transform', 'translate(100,0)')
+    }
 
 });
