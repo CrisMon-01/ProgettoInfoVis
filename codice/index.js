@@ -25,7 +25,7 @@ d3.json('../dati/datimultivar.json').then( data => {
         .domain(data.map( datapoint => datapoint.numero ))
 
     const shift_by_lunghezza = d3.scaleLinear()
-        .domain([0, 4550 ])
+        .domain([0,4550])     //[0,4550]
         .range([0, dims.width-margin.widthmargin]);
 
     const shift_by_dimensione_ruote = d3.scaleLinear()
