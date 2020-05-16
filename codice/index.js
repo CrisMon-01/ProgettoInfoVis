@@ -67,7 +67,7 @@ d3.json('../dati/datimultivar.json').then( data => {
         .attr('fill', d => ( colour(d.numero) ))
         .attr('stroke','black')
         .attr('stroke-width', '1')
-        // .attr('number', d => d.numero )        
+        .attr('number', d => d.numero )        
         .attr('id','muso');
 
     // body
@@ -79,7 +79,7 @@ d3.json('../dati/datimultivar.json').then( data => {
         .attr('fill', d => ( colour(d.numero) ))
         .attr('stroke','black')
         .attr('stroke-width', '1')
-        // .attr('number', d => d.numero )
+        .attr('number', d => d.numero )
         .attr('id','body')
             .on('click', transitionByWeight.bind(this));
 
@@ -92,7 +92,7 @@ d3.json('../dati/datimultivar.json').then( data => {
         .attr('fill', d => ( colour(d.numero) ))
         .attr('stroke','black')
         .attr('stroke-width', '1')
-        // .attr('number', d => d.numero )
+        .attr('number', d => d.numero )
         .attr('id','backwing');
 
     // connection back wing sn
@@ -103,7 +103,7 @@ d3.json('../dati/datimultivar.json').then( data => {
         .attr('y2', d => ( y(d.numero) + 120 ))
         .attr('stroke','black')
         .attr('stroke-width','2')
-        // .attr('number', d => d.numero )
+        .attr('number', d => d.numero )
         .attr('id','connectionbackwingsn');
 
     // connection back wing dx
@@ -114,7 +114,7 @@ d3.json('../dati/datimultivar.json').then( data => {
         .attr('y2', d => ( y(d.numero) + 120 ))
         .attr('stroke','black')
         .attr('stroke-width','2')
-        // .attr('number', d => d.numero )
+        .attr('number', d => d.numero )
         .attr('id','connectionbackwingdx');        
 
     // wheel up sn
@@ -126,7 +126,7 @@ d3.json('../dati/datimultivar.json').then( data => {
         .attr('fill','grey')
         .attr('stroke','black')
         .attr('stroke-width', '1')
-        // .attr('number', d => d.numero )
+        .attr('number', d => d.numero )
         .attr('id','ruotaupsn')
             .on('click', transitionByDistanceWhell.bind(this));
 
@@ -139,7 +139,7 @@ d3.json('../dati/datimultivar.json').then( data => {
         .attr('fill','grey')
         .attr('stroke','black')
         .attr('stroke-width', '1')
-        // .attr('number', d => d.numero )
+        .attr('number', d => d.numero )
         .attr('id','ruotaupdx');
 
     // wheel down sn
@@ -151,7 +151,7 @@ d3.json('../dati/datimultivar.json').then( data => {
         .attr('fill','grey')
         .attr('stroke','black')
         .attr('stroke-width', '1')
-        // .attr('number', d => d.numero )
+        .attr('number', d => d.numero )
         .attr('id','ruotadownsn')
             .on('click', transitionByWheelDim.bind(this));
 
@@ -164,7 +164,7 @@ d3.json('../dati/datimultivar.json').then( data => {
         .attr('fill','grey')
         .attr('stroke','black')
         .attr('stroke-width', '1')
-        // .attr('number', d => d.numero )
+        .attr('number', d => d.numero )
         .attr('id','ruotadowndx');
 
     // wheel arm sn down
@@ -175,7 +175,7 @@ d3.json('../dati/datimultivar.json').then( data => {
         .attr('y2', d => ( y(d.numero) + 102 ))
         .attr('stroke','black')
         .attr('stroke-width',5)
-        // .attr('number', d => d.numero )
+        .attr('number', d => d.numero )
         .attr('id','bracciodownsn');
 
     // wheel arm sn up
@@ -186,7 +186,7 @@ d3.json('../dati/datimultivar.json').then( data => {
         .attr('y2', d => ( y(d.numero) + 57 ))
         .attr('stroke','black')
         .attr('stroke-width',5)
-        // .attr('number', d => d.numero )
+        .attr('number', d => d.numero )
         .attr('id','braccioupsn');
 
     // wheel arm dx down
@@ -197,7 +197,7 @@ d3.json('../dati/datimultivar.json').then( data => {
         .attr('y2', d => ( y(d.numero) + 102 ))
         .attr('stroke','black')
         .attr('stroke-width',5)
-        // .attr('number', d => d.numero )
+        .attr('number', d => d.numero )
         .attr('id','bracciodowndx');
 
     // wheel arm dx up
@@ -208,7 +208,7 @@ d3.json('../dati/datimultivar.json').then( data => {
         .attr('y2', d => ( y(d.numero) + 57 ))
         .attr('stroke','black')
         .attr('stroke-width',5)
-        // .attr('number', d => d.numero )
+        .attr('number', d => d.numero )
         .attr('id','braccioupdx');
 
     function transitionByLength(data) {

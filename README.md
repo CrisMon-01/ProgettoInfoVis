@@ -16,5 +16,11 @@ dimensione ruote<br/>
 distanza delle ruote<br/>
 peso<br/>
 
+CLICK: <br/>
+body: ordina per peso <br/>
+ala anteriore: ordina per lunghezza  <br/>
+ruota anteriore sinistra: ordina per distanza tra le ruote  <br/>
+ruota posteriore sinistra: ordina per dimensione ruote  <br/>
+
 Utilizzo del logo da parte della comunità universitaria.
 Il logo dell’Università degli Studi Roma Tre è un marchio registrato di proprietà esclusiva dell’Università e può essere utilizzato dalla comunità universitaria nell’ambito delle attività scientifiche, didattiche e comunicative.
