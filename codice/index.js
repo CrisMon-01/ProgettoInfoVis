@@ -25,19 +25,19 @@ d3.json('../dati/datimultivar.json').then( data => {
         .domain(data.map( datapoint => datapoint.numero ))
 
     const shift_by_lunghezza = d3.scaleLinear()
-        .domain([0,4550])     //[0,4550]
+        .domain([0, d3.max(data,d=>d.lunghezza)])     //[0,4550]
         .range([0, dims.width-margin.widthmargin]);
 
     const shift_by_dimensione_ruote = d3.scaleLinear()
-        .domain([0, 18 ])
+        .domain([0, d3.max(data,d=>d.dimensione_ruote) ])
         .range([0, dims.width-margin.widthmargin]);    
 
     const shift_by_distanza_delle_ruote = d3.scaleLinear()
-        .domain([0, 770 ])
+        .domain([0, d3.max(data,d=>d.distanza_delle_ruote) ])
         .range([0, dims.width-margin.widthmargin]);
 
     const shift_by_peso = d3.scaleLinear()
-        .domain([0, 2100 ])
+        .domain([0, d3.max(data,d=>d.peso) ])
         .range([0, dims.width-margin.widthmargin]);
 
     const shapes = svg.selectAll('svg').data(data);
