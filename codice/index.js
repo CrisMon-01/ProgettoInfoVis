@@ -24,8 +24,9 @@ d3.json('../dati/datimultivar.json').then( data => {
     const colour = d3.scaleOrdinal(d3["schemeSet3"])
         .domain(data.map( datapoint => datapoint.numero ))
 
+    // shift on x by one field
     const shift_by_lunghezza = d3.scaleLinear()
-        .domain([0, d3.max(data,d=>d.lunghezza)])     //[0,4550]
+        .domain([0, d3.max(data,d=>d.lunghezza)])    
         .range([0, dims.width-margin.widthmargin]);
 
     const shift_by_dimensione_ruote = d3.scaleLinear()
