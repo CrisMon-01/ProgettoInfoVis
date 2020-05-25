@@ -27,6 +27,9 @@ Run with Docker: <br/>
   docker build -t demoinfovisimg .
   docker run -dit --name demoinfoviscontainer -p 8080:80 demoinfovisimg
  `````
-
+or pull it from Docker Hub:
+ `````
+  docker push crismon01/infovisprog1
+ `````
 Utilizzo del logo da parte della comunità universitaria.
 Il logo dell’Università degli Studi Roma Tre è un marchio registrato di proprietà esclusiva dell’Università e può essere utilizzato dalla comunità universitaria nell’ambito delle attività scientifiche, didattiche e comunicative.

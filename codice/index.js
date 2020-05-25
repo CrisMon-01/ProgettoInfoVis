@@ -44,7 +44,8 @@ d3.json('../dati/datimultivar.json').then( data => {
     const shapes = svg.selectAll('svg').data(data);
 
     const groups = shapes.enter().append('g')
-        .attr('id', d => 'car'+d.numero );    
+        .attr('id', d => 'car'+d.numero )
+            .on('mouseover', handleMouseOver);    
 
     //front wing
     groups.append('rect')
@@ -254,3 +255,8 @@ d3.json('../dati/datimultivar.json').then( data => {
     }
     
 });
+
+//event handler
+const handleMouseOver = (d, i, n) => {
+    console.log(d3.select(n[i]))
+}
