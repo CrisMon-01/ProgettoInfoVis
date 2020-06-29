@@ -36,6 +36,14 @@ d3.json('../dati/datimultivar.json').then( data => {
         .domain([0,d3.max(data,d => d.distanza_delle_ruote)])
         .range([0,50])
 
+    const weight = d3.scaleLinear()
+        .domain([d3.min(data,d => d.peso),d3.max(data,d => d.peso)])
+        .range([70,75])
+
+    const weightstroke = d3.scaleLinear()
+        .domain([d3.min(data,d => d.peso),d3.max(data,d => d.peso)])
+        .range([0,5])
+
     // shift on x by one field
     const shift_by_lunghezza = d3.scaleLinear()
         .domain([0, d3.max(data,d=>d.lunghezza)])    
@@ -145,19 +153,6 @@ d3.json('../dati/datimultivar.json').then( data => {
         .attr('id','ruotaupsn')
             .on('click', transitionByDistanceWhell.bind(this));
 
-    // body
-    groups.append('rect')
-        .attr("x", d => (lungheach(d.lunghezza) + 20))
-        .attr("y",  d => ( y(d.numero) + 20 ) )
-        .attr("width", dims.larghbody)
-        .attr("height", 50)
-        .attr('fill', d => ( colour(d.numero) ))
-        .attr('stroke','black')
-        .attr('stroke-width', '1')
-        .attr('number', d => d.numero )
-        .attr('id','body')
-            .on('click', transitionByWeight.bind(this));
-
     //muzzle
     groups.append('rect')
         .attr('x', d => (lungheach(d.lunghezza)+20+dims.larghbody))
@@ -169,6 +164,19 @@ d3.json('../dati/datimultivar.json').then( data => {
         .attr('stroke-width', '1')
         .attr('number', d => d.numero )        
         .attr('id','muso');
+
+    // body
+    groups.append('rect')
+        .attr("x", d => (lungheach(d.lunghezza) + 20))
+        .attr("y",  d => ( y(d.numero) + 20 ) )
+        .attr("width", d => weight(d.peso))
+        .attr("height", 50)
+        .attr('fill', d => ( colour(d.numero) ))
+        .attr('stroke','black')
+        .attr('stroke-width', d=> weightstroke(d.peso) )
+        .attr('number', d => d.numero )
+        .attr('id','body')
+            .on('click', transitionByWeight.bind(this));
             
     //front wing
     groups.append('rect')
