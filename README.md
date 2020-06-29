@@ -24,10 +24,10 @@ I dati sono codificati nella  silhouette della macchina come segue:
 * peso: nella lunghezza del blocco centrale della macchina e nella stroke-width, maggiore è il peso, più lungo sarà il body e la stroke-width di questo
 
 CLICK: <br/>
-body: ordina per peso <br/>
-ala anteriore: ordina per lunghezza  <br/>
-ruote anteriori : ordina per distanza tra le ruote  <br/>
-ruote posteriori : ordina per dimensione ruote  <br/>
+* body: ordina per peso <br/>
+* ala anteriore: ordina per lunghezza  <br/>
+* ruote anteriori : ordina per distanza tra le ruote  <br/>
+* ruote posteriori : ordina per dimensione ruote  <br/>
 
 Run with Docker: <br/>
  `````
