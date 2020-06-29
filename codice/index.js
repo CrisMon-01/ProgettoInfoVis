@@ -142,7 +142,8 @@ d3.json('../dati/datimultivar.json').then( data => {
         .attr('stroke','black')
         .attr('stroke-width', '1')
         .attr('number', d => d.numero )
-        .attr('id','ruotaupdx');
+        .attr('id','ruotaupdx')
+            .on('click', transitionByDistanceWhell.bind(this));
 
     // wheel down sn
     groups.append("rect")
@@ -167,7 +168,8 @@ d3.json('../dati/datimultivar.json').then( data => {
         .attr('stroke','black')
         .attr('stroke-width', '1')
         .attr('number', d => d.numero )
-        .attr('id','ruotadowndx');
+        .attr('id','ruotadowndx')
+            .on('click', transitionByWheelDim.bind(this));
 
     // wheel arm sn down
     groups.append('line')
