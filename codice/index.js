@@ -47,6 +47,18 @@ d3.json('../dati/datimultivar.json').then( data => {
         .attr('id', d => 'car'+d.numero )
             .on('mouseover', handleMouseOver);    
 
+    //muzzle
+    groups.append('rect')
+        .attr('x', 67)
+        .attr('y',  d => ( y(d.numero) + 30 ))
+        .attr('width', 15)
+        .attr('height',20)
+        .attr('fill', d => ( colour(d.numero) ))
+        .attr('stroke','black')
+        .attr('stroke-width', '1')
+        .attr('number', d => d.numero )        
+        .attr('id','muso');
+
     //front wing
     groups.append('rect')
         .attr('x',55)
@@ -59,18 +71,7 @@ d3.json('../dati/datimultivar.json').then( data => {
         .attr('id','frontwing')
         .attr('number', d => d.numero )
             .on('click', transitionByLength.bind(this));
- 
-    //muzzle
-    groups.append('rect')
-        .attr('x', 67)
-        .attr('y',  d => ( y(d.numero) + 30 ))
-        .attr('width', 15)
-        .attr('height',20)
-        .attr('fill', d => ( colour(d.numero) ))
-        .attr('stroke','black')
-        .attr('stroke-width', '1')
-        .attr('number', d => d.numero )        
-        .attr('id','muso');
+
 
     // body
     groups.append('rect')
